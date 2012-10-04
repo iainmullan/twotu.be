@@ -136,3 +136,7 @@ footer .credits {
 	float:right;
 	text-align:right;
 }
+
+footer .fb_iframe_widget iframe {
+height: 25px !important;
+}
