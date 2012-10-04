@@ -1,4 +1,11 @@
 
+var params = { allowScriptAccess: "always" };
+swfobject.embedSWF("http://www.youtube.com/v/Bk1-oqNvOlk?enablejsapi=1&playerapiid=p1&version=3&autoplay=0",
+                   "p1", "320", "260", "8", null, null, params, {id:"p1"});
+swfobject.embedSWF("http://www.youtube.com/v/8srPkl2PzJ4?enablejsapi=1&playerapiid=p2&version=3&autoplay=0",
+                   "p2", "320", "260", "8", null, null, params, {id:"p2"});
+
+
 var p1, p2;
 
 function onYouTubePlayerReady(id) {

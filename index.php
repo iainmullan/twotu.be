@@ -10,22 +10,11 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/twotube.css">
 
         <link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.8.24.custom.css" />
-
-        <script src="js/vendor/modernizr-2.6.1.min.js"></script>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
-
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
 
 		<title>TwoTube - A YouTube Crossfader</title>
 		
@@ -93,27 +82,20 @@
 </footer>
 </div>
 
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="swfobject/swfobject.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
 
 
-		<script type="text/javascript" src="swfobject/swfobject.js"></script>
+	<script>
+	    var _gaq=[['_setAccount','UA-323014-31'],['_trackPageview']];
+	    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+	    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+	    s.parentNode.insertBefore(g,s)}(document,'script'));
+	</script>
 
-		  <script type="text/javascript">
-
-		    var params = { allowScriptAccess: "always" };
-
-		    swfobject.embedSWF("http://www.youtube.com/v/Bk1-oqNvOlk?enablejsapi=1&playerapiid=p1&version=3&autoplay=0",
-		                       "p1", "320", "260", "8", null, null, params, {id:"p1"});
-
-		    swfobject.embedSWF("http://www.youtube.com/v/8srPkl2PzJ4?enablejsapi=1&playerapiid=p2&version=3&autoplay=0",
-		                       "p2", "320", "260", "8", null, null, params, {id:"p2"});
-
-		  </script>
-
-        <script>
-            var _gaq=[['_setAccount','UA-323014-31'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
-    </body>
+</body>
 </html>
