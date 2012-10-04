@@ -14,6 +14,7 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/twotube.css">
 
         <link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.8.24.custom.css" />
 
@@ -34,132 +35,18 @@
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
 
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=368540363214051";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+		
+		
         <!-- Add your site or application content here -->
 
-<style>
-	#content {
-		font-family: Arial;
-		width: 900px;
-		margin: 0 auto;
-		color: #555;
-		font-size: 13px;
-	}
-	
-	header {
-		padding-bottom: 10px;
-		margin-bottom: 20px;
-		border-bottom: 1px solid #ccc;
-	}
-	#slider {
-		width: 300px;
-		margin: 0 auto;
-		clear:both;
-		position: absolute;
-		top: 200px;
-		left: 300px;
-	}
-
-	#s1 {
-		float:left;
-	}
-	#s2 {
-		float:right;
-	}
-
-	.video {
-		clear:both;
-	}
-	a, a:link, a:hover {
-		color: #555;
-	}
-	a:active {
-		color: #955;
-	}
-	.player-container {
-		width: 440px;
-		float:left;
-	}
-	
-	.search-results {
-		text-align:left;
-		padding-right: 20px;
-	}
-	.search-results div {
-		margin-bottom: 5px;
-		padding-top: 5px;
-		border-top: 1px solid #999;
-		clear:left;
-	}
-	.search-results div:first-child {
-		border: 0;
-	}
-	.search-results img {
-		float:left;
-		width: 80px;
-		height: 60px;
-		margin: 0 10px 0 0;
-	}
-
-	#content {
-		padding-bottom: 30px;
-		position:relative;
-	}
-
-	footer {
-		background-color: rgba(255,255,255,0.7);
-		clear:both;
-		text-align:right;
-		position:fixed;
-		bottom: 0;
-		width: 900px;
-		margin: 0 auto;
-	}
-	
-	.clear {
-		clear:both;
-	}
-	
-	#player2 {
-		float: right;
-		text-align:right;
-	}
-	
-	#player2 .search-results div img {
-		float: right;
-		margin: 0 0 0 10px;
-	}
-	#player2 .search-results div  {
-		text-align:right;
-	}
-	
-	.player-container form input {
-		width: 315px;
-	}
-	#player2 form input {
-		margin-right: 3px;
-	}
-	
-	h1 span.two {
-		padding: 5px 3px 5px 0;
-	}
-	h1 span.tube {
-		background-color: red;
-		color: white;
-		padding: 5px 8px;
-	}
-	
-	h1,h2 {
-		width: 50%;
-		float: left;
-	}
-	
-	h2 {
-		text-align:right;
-		font-size: 2em;
-	}
-
-	
-</style>
 
 <div id="content">
 
@@ -188,11 +75,19 @@
 </div>
 
 
-</div>
 
 <footer>
-	<span>an <a href="http://www.ebotunes.com">ebotunes</a> production</span> by <a href="http://twitter.com/iainmullan">@iainmullan</a>
+	<div class="inner">
+	<div class="share">
+		<div class="fb-like" data-href="http://twotu.be/" data-send="true" data-width="450" data-show-faces="true"></div>
+	</div>
+	<div class="credits">
+		<span>an <a href="http://www.ebotunes.com">ebotunes</a> production</span> by <a href="http://twitter.com/iainmullan">@iainmullan</a>
+	</div>
+	</div>
 </footer>
+</div>
+
 
 
 		<script type="text/javascript" src="swfobject/swfobject.js"></script>
