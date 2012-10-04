@@ -14,27 +14,81 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+
+        <link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.8.24.custom.css" />
+
         <script src="js/vendor/modernizr-2.6.1.min.js"></script>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
+        <!-- Add your site or application content here
 
 
-		<object width="640" height="360" id="myPlayer">
-		  <param name="movie" value="https://www.youtube.com/v/Bk1-oqNvOlk?version=3"></param>
-		  <param name="allowFullScreen" value="true"></param>
-		  <param name="allowScriptAccess" value="always"></param>
-		  <embed src="https://www.youtube.com/v/Bk1-oqNvOlk?version=3" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="640" height="360"></embed>
-		</object>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+Bk1-oqNvOlk
+
+
+-->
+
+<style>
+	#content {
+		font-family: Arial;
+		width: 900px;
+		margin: 0 auto;
+		text-align:center;
+	}
+	#slider {
+		width: 200px;
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
+</style>
+
+<div id="content">
+
+
+	<h1>TwoTube</h1>
+
+	<div id="slider"></div>
+
+<div id="p1">
+  You need Flash player 8+ and JavaScript enabled to view this video.
+</div>
+
+<div id="p2">
+  You need Flash player 8+ and JavaScript enabled to view this video.
+</div>
+
+
+</div>
+
+
+
+		<script type="text/javascript" src="swfobject/swfobject.js"></script>
+
+		  <script type="text/javascript">
+
+		    var params = { allowScriptAccess: "always" };
+
+		    swfobject.embedSWF("http://www.youtube.com/v/Bk1-oqNvOlk?enablejsapi=1&playerapiid=p1&version=3&autoplay=1",
+		                       "p1", "425", "356", "8", null, null, params, {id:"p1"});
+
+		    swfobject.embedSWF("http://www.youtube.com/v/8srPkl2PzJ4?enablejsapi=1&playerapiid=p2&version=3&autoplay=1",
+		                       "p2", "425", "356", "8", null, null, params, {id:"p2"});
+
+		  </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
