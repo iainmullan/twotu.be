@@ -26,6 +26,7 @@
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
+		<title>TwoTube - A YouTube Crossfader</title>
 
     </head>
     <body>
@@ -33,26 +34,29 @@
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here
-
-
-
-Bk1-oqNvOlk
-
-
--->
+        <!-- Add your site or application content here -->
 
 <style>
 	#content {
 		font-family: Arial;
 		width: 900px;
 		margin: 0 auto;
-		text-align:center;
+		color: #555;
+		font-size: 13px;
+	}
+	
+	header {
+		padding-bottom: 10px;
+		margin-bottom: 20px;
+		border-bottom: 1px solid #ccc;
 	}
 	#slider {
-		width: 200px;
+		width: 300px;
 		margin: 0 auto;
-		margin-bottom: 200px;
+		clear:both;
+		position: absolute;
+		top: 200px;
+		left: 300px;
 	}
 
 	#s1 {
@@ -65,24 +69,125 @@ Bk1-oqNvOlk
 	.video {
 		clear:both;
 	}
+	a, a:link, a:hover {
+		color: #555;
+	}
+	a:active {
+		color: #955;
+	}
+	.player-container {
+		width: 440px;
+		float:left;
+	}
+	
+	.search-results {
+		text-align:left;
+		padding-right: 20px;
+	}
+	.search-results div {
+		margin-bottom: 5px;
+		padding-top: 5px;
+		border-top: 1px solid #999;
+		clear:left;
+	}
+	.search-results div:first-child {
+		border: 0;
+	}
+	.search-results img {
+		float:left;
+		width: 80px;
+		height: 60px;
+		margin: 0 10px 0 0;
+	}
+
+	#content {
+		padding-bottom: 30px;
+		position:relative;
+	}
+
+	footer {
+		background-color: rgba(255,255,255,0.7);
+		clear:both;
+		text-align:right;
+		position:fixed;
+		bottom: 0;
+		width: 900px;
+		margin: 0 auto;
+	}
+	
+	.clear {
+		clear:both;
+	}
+	
+	#player2 {
+		float: right;
+		text-align:right;
+	}
+	
+	#player2 .search-results div img {
+		float: right;
+		margin: 0 0 0 10px;
+	}
+	#player2 .search-results div  {
+		text-align:right;
+	}
+	
+	.player-container form input {
+		width: 315px;
+	}
+	#player2 form input {
+		margin-right: 3px;
+	}
+	
+	h1 span.two {
+		padding: 5px 3px 5px 0;
+	}
+	h1 span.tube {
+		background-color: red;
+		color: white;
+		padding: 5px 8px;
+	}
+	
+	h1,h2 {
+		width: 50%;
+		float: left;
+	}
+	
+	h2 {
+		text-align:right;
+		font-size: 2em;
+	}
+
+	
 </style>
 
 <div id="content">
 
-	<h1>TwoTube</h1>
-	<h2>A YouTube Crossfader</h2>
+	<header>
+		<h1><span class="two">Two</span><span class="tube">Tube</span></h1>
+		<h2>A YouTube Crossfader</h2>
+		<br class="clear" />
+	</header>
 
 	<div id="slider"></div>
 
-	<input id="s1" type="text" />
-
-	<div id="p1" class="video">
-	  You need Flash player 8+ and JavaScript enabled to view this video.
+	<?php for($i=1; $i<=2;$i++): ?>
+	<div class="player-container" id="player<?php echo $i; ?>">
+		<div id="p<?php echo $i; ?>" class="video">
+		  You need Flash player 8+ and JavaScript enabled to view this video.
+		</div>
+		<br/>
+		<form rel="<?php echo $i; ?>">
+			<input type="text" class="input" placeholder="Search..." />
+		</form>
+		<div class="search-results"></div>
 	</div>
+	<?php endfor; ?>
 
-	<div id="p2" class="video">
-	  You need Flash player 8+ and JavaScript enabled to view this video.
-	</div>
+
+	<br class="clear" />
+</div>
+
 
 </div>
 
@@ -98,11 +203,11 @@ Bk1-oqNvOlk
 
 		    var params = { allowScriptAccess: "always" };
 
-		    swfobject.embedSWF("http://www.youtube.com/v/Bk1-oqNvOlk?enablejsapi=1&playerapiid=p1&version=3&autoplay=1",
-		                       "p1", "425", "356", "8", null, null, params, {id:"p1"});
+		    swfobject.embedSWF("http://www.youtube.com/v/Bk1-oqNvOlk?enablejsapi=1&playerapiid=p1&version=3&autoplay=0",
+		                       "p1", "320", "260", "8", null, null, params, {id:"p1"});
 
-		    swfobject.embedSWF("http://www.youtube.com/v/8srPkl2PzJ4?enablejsapi=1&playerapiid=p2&version=3&autoplay=1",
-		                       "p2", "425", "356", "8", null, null, params, {id:"p2"});
+		    swfobject.embedSWF("http://www.youtube.com/v/8srPkl2PzJ4?enablejsapi=1&playerapiid=p2&version=3&autoplay=0",
+		                       "p2", "320", "260", "8", null, null, params, {id:"p2"});
 
 		  </script>
 
