@@ -28,6 +28,8 @@
         <script src="js/main.js"></script>
 
 		<title>TwoTube - A YouTube Crossfader</title>
+		
+		<meta property="fb:admins" content="714655333" />
 
     </head>
     <body>
