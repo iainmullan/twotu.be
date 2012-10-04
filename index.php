@@ -79,7 +79,7 @@
 <footer>
 	<div class="inner">
 	<div class="share">
-		<div class="fb-like" data-href="http://twotu.be/" data-send="true" data-width="450" data-show-faces="true"></div>
+		<div class="fb-like" data-href="http://twotu.be/" data-send="false" data-width="450" data-show-faces="true"></div>
 	</div>
 	<div class="credits">
 		<span>an <a href="http://www.ebotunes.com">ebotunes</a> production</span> by <a href="http://twitter.com/iainmullan">@iainmullan</a>
