@@ -184,7 +184,6 @@
 	</div>
 	<?php endfor; ?>
 
-
 	<br class="clear" />
 </div>
 
@@ -192,8 +191,7 @@
 </div>
 
 <footer>
-	<span>an <a href="http://www.ebotunes.com">ebotunes</a> production</span>
-	<a href="http://twitter.com/iainmullan">@iainmullan</a>
+	<span>an <a href="http://www.ebotunes.com">ebotunes</a> production</span> by <a href="http://twitter.com/iainmullan">@iainmullan</a>
 </footer>
 
 
