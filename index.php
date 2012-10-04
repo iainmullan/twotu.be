@@ -31,6 +31,11 @@
 		
 		<meta property="fb:admins" content="714655333" />
 
+		<meta property="og:site_name" content="Two Tube" />
+		<meta property="og:title" content="Two Tube" />
+		<meta property="og:url" content="http://twotu.be" />
+		<meta property="og:description" content="A YouTube Crossfader" />
+
     </head>
     <body>
         <!--[if lt IE 7]>
