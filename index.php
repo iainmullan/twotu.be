@@ -22,12 +22,48 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+
+
+		<object width="640" height="360" id="myPlayer">
+		  <param name="movie" value="https://www.youtube.com/v/Bk1-oqNvOlk?version=3"></param>
+		  <param name="allowFullScreen" value="true"></param>
+		  <param name="allowScriptAccess" value="always"></param>
+		  <embed src="https://www.youtube.com/v/Bk1-oqNvOlk?version=3" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="640" height="360"></embed>
+		</object>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+
+
+		<script>
+		  // Load the IFrame Player API code asynchronously.
+		  var tag = document.createElement('script');
+		  tag.src = "https://www.youtube.com/player_api";
+		  var firstScriptTag = document.getElementsByTagName('script')[0];
+		  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+		  // Replace the 'ytplayer' element with an <iframe> and
+		  // YouTube player after the API code downloads.
+		  var player;
+		  function onYouTubePlayerAPIReady() {
+		    player = new YT.Player('ytplayer', {
+		      height: '390',
+		      width: '640',
+		      videoId: 'Bk1-oqNvOlk',
+				enablejsapi: 1
+		    });
+
+			console.log(player);
+
+			player.seekTo(65);
+
+
+		  }
+		</script>
+
+
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
