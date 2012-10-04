@@ -36,35 +36,6 @@
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
-
-		<script>
-		  // Load the IFrame Player API code asynchronously.
-		  var tag = document.createElement('script');
-		  tag.src = "https://www.youtube.com/player_api";
-		  var firstScriptTag = document.getElementsByTagName('script')[0];
-		  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-		  // Replace the 'ytplayer' element with an <iframe> and
-		  // YouTube player after the API code downloads.
-		  var player;
-		  function onYouTubePlayerAPIReady() {
-		    player = new YT.Player('ytplayer', {
-		      height: '390',
-		      width: '640',
-		      videoId: 'Bk1-oqNvOlk',
-				enablejsapi: 1
-		    });
-
-			console.log(player);
-
-			player.seekTo(65);
-
-
-		  }
-		</script>
-
-
-
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
