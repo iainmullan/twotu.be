@@ -23,6 +23,7 @@
 	<meta property="og:title" content="Two Tube" />
 	<meta property="og:url" content="http://twotu.be" />
 	<meta property="og:description" content="A YouTube Crossfader" />
+	<meta property="og:type" content="website" />
 
 </head>
 <body>
