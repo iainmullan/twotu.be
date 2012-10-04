@@ -52,28 +52,44 @@ Bk1-oqNvOlk
 	#slider {
 		width: 200px;
 		margin: 0 auto;
-		margin-bottom: 20px;
+		margin-bottom: 200px;
+	}
+
+	#s1 {
+		float:left;
+	}
+	#s2 {
+		float:right;
+	}
+
+	.video {
+		clear:both;
 	}
 </style>
 
 <div id="content">
 
-
 	<h1>TwoTube</h1>
+	<h2>A YouTube Crossfader</h2>
 
 	<div id="slider"></div>
 
-<div id="p1">
-  You need Flash player 8+ and JavaScript enabled to view this video.
+	<input id="s1" type="text" />
+
+	<div id="p1" class="video">
+	  You need Flash player 8+ and JavaScript enabled to view this video.
+	</div>
+
+	<div id="p2" class="video">
+	  You need Flash player 8+ and JavaScript enabled to view this video.
+	</div>
+
 </div>
 
-<div id="p2">
-  You need Flash player 8+ and JavaScript enabled to view this video.
-</div>
-
-
-</div>
-
+<footer>
+	<span>an <a href="http://www.ebotunes.com">ebotunes</a> production</span>
+	<a href="http://twitter.com/iainmullan">@iainmullan</a>
+</footer>
 
 
 		<script type="text/javascript" src="swfobject/swfobject.js"></script>

@@ -27,4 +27,14 @@ $(document).ready(function() {
 		}
 	});
 
+	$('#s1').change(function() {
+		var url = $(this).val();
+		console.log('New video: '+url);
+		p1.loadVideoByUrl(url);
+	});
+
+	// $('#s2').change(function() {
+	// 	p2.loadVideoByUrl($(this).val());
+	// });
+
 });
