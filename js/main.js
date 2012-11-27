@@ -44,7 +44,7 @@ $(document).ready(function() {
 		
 		var sr = $(this).parent().find('.search-results');
 		
-		$.get("https://gdata.youtube.com/feeds/api/videos?alt=json&q="+q, function(data) {
+		$.getJSON("https://gdata.youtube.com/feeds/api/videos?alt=json&q="+q, function(data) {
 			console.log(data);
 			sr.html('');
 			$.each(data.feed.entry, function (i,e) {
