@@ -1,6 +1,6 @@
 
 var params = { allowScriptAccess: "always" };
-swfobject.embedSWF("http://www.youtube.com/v/Bk1-oqNvOlk?enablejsapi=1&playerapiid=p1&version=3&autoplay=0",
+swfobject.embedSWF("http://www.youtube.com/v/mr-NXf5id0I?enablejsapi=1&playerapiid=p1&version=3&autoplay=0",
                    "p1", "320", "260", "8", null, null, params, {id:"p1"});
 swfobject.embedSWF("http://www.youtube.com/v/8srPkl2PzJ4?enablejsapi=1&playerapiid=p2&version=3&autoplay=0",
                    "p2", "320", "260", "8", null, null, params, {id:"p2"});
@@ -21,6 +21,16 @@ function onYouTubePlayerReady(id) {
 	}
 
 }
+function onytplayerStateChange(newState) {
+      if(newState === 2){
+		console.log(p1.getCurrentTime());
+        // var stamp = document.createElement('dt');
+        // var time = ytplayer.getCurrentTime();
+        // var timestamp = parseInt(time/60);
+        // var secs = parseInt(time%60);
+	}
+}
+
 
 $(document).ready(function() {
 
@@ -33,17 +43,17 @@ $(document).ready(function() {
 			p2.setVolume(ui.value);
 		}
 	});
-	
+
 
 	$('form').submit(function(e) {
-		
+
 		e.preventDefault();
-		
+
 		var q = $(this).find('input').val();
 		var p = $(this).attr('rel');
-		
+
 		var sr = $(this).parent().find('.search-results');
-		
+
 		$.get("https://gdata.youtube.com/feeds/api/videos?alt=json&q="+q, function(data) {
 			console.log(data);
 			sr.html('');
@@ -53,18 +63,18 @@ $(document).ready(function() {
 				sr.append('<div class="video"><img src="'+thumb+'" /><a rel="'+p+'" href="'+playUrl+'">'+e.title.$t+'</a><br class="clear" /></div>');
 			});
 		});
-		
+
 	});
-	
+
 	$('.search-results a').live('click', function(e) {
 		e.preventDefault();
 		var url = $(this).attr('href');
 		var p = $(this).attr('rel');
 		console.log(url);
 		if (p==1) {
-			p1.loadVideoByUrl(url);			
+			p1.loadVideoByUrl(url);
 		} else {
-			p2.loadVideoByUrl(url);			
+			p2.loadVideoByUrl(url);
 		}
 		return false;
 	});
