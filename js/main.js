@@ -53,9 +53,7 @@ $(document).ready(function() {
 		var p = $(this).attr('rel');
 
 		var sr = $(this).parent().find('.search-results');
-
-		$.get("https://gdata.youtube.com/feeds/api/videos?alt=json&q="+q, function(data) {
-			console.log(data);
+		$.getJSON("https://gdata.youtube.com/feeds/api/videos?alt=json&q="+q, function(data) {
 			sr.html('');
 			$.each(data.feed.entry, function (i,e) {
 				var thumb = e.media$group.media$thumbnail[3].url;
